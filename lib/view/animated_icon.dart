@@ -1,3 +1,4 @@
+import 'package:animation/view/tween_animation.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedIconsss extends StatefulWidget {
@@ -15,7 +16,7 @@ class _AnimatedIconsssState extends State<AnimatedIconsss>
   @override
   void initState() {
     _controller = AnimationController(
-      duration: Duration(seconds: 1),
+      duration: const Duration(seconds: 1),
       vsync: this,
     );
     super.initState();
@@ -31,7 +32,7 @@ class _AnimatedIconsssState extends State<AnimatedIconsss>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Animated icon"),
+        title: const Text("Animated icon"),
       ),
       body: Center(
         child: GestureDetector(
@@ -51,6 +52,10 @@ class _AnimatedIconsssState extends State<AnimatedIconsss>
           ),
         ),
       ),
+      floatingActionButton: FloatingActionButton(onPressed: () {
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (context) => TweenAnimationnn()));
+      }),
     );
   }
 }

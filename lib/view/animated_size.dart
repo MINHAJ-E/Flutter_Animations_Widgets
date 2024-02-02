@@ -1,4 +1,4 @@
-import 'package:animation/animated_positioned.dart';
+import 'package:animation/view/animated_positioned.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -12,12 +12,12 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("animated size")),
+      appBar: AppBar(title: const Text("animated size")),
       body: Center(
         child: AnimatedSize(
           // vsync: this, // Pass `this` as the `vsync`
-          duration: Duration(seconds: 3),
-          child: Container(
+          duration: const Duration(seconds: 3),
+          child: SizedBox(
             // width: 100,
             height: double.infinity,
             child: Image.asset("asset/beach.jpg"),
@@ -25,8 +25,8 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
         ),
       ),
       floatingActionButton: FloatingActionButton(onPressed: () {
-        Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => AnimatedPositioneddd()));
+        Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => const AnimatedPositioneddd()));
       }),
     );
   }

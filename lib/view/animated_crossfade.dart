@@ -1,4 +1,4 @@
-import 'package:animation/animated_default_textstyle.dart';
+import 'package:animation/view/animated_default_textstyle.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedCrossFadeee extends StatefulWidget {
@@ -14,12 +14,12 @@ class _AnimatedCrossFadeeeState extends State<AnimatedCrossFadeee> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Animated Cross Fade"),
+        title: const Text("Animated Cross Fade"),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SizedBox(
+          const SizedBox(
             width: double.infinity,
             height: 100,
           ),
@@ -29,18 +29,18 @@ class _AnimatedCrossFadeeeState extends State<AnimatedCrossFadeee> {
                   _bool = !_bool;
                 });
               },
-              child: Text("SWITCH")),
+              child: const Text("SWITCH")),
           AnimatedCrossFade(
               firstChild: Image.asset("asset/beach.jpg"),
               secondChild: Image.asset("asset/bg.jpg"),
               crossFadeState:
                   _bool ? CrossFadeState.showFirst : CrossFadeState.showSecond,
-              duration: Duration(seconds: 1))
+              duration: const Duration(seconds: 1))
         ],
       ),
       floatingActionButton: FloatingActionButton(onPressed: () {
         Navigator.of(context).push(MaterialPageRoute(
-            builder: (context) => AnimatedDeafultTextStyleee()));
+            builder: (context) => const AnimatedDeafultTextStyleee()));
       }),
     );
   }

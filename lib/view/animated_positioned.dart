@@ -1,4 +1,4 @@
-import 'package:animation/animated_alighn.dart';
+import 'package:animation/view/animated_alighn.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedPositioneddd extends StatefulWidget {
@@ -16,7 +16,7 @@ class _AnimatedPositionedddState extends State<AnimatedPositioneddd>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("animated positioned"),
+        title: const Text("animated positioned"),
       ),
       body: SizedBox(
         width: 200,
@@ -28,7 +28,7 @@ class _AnimatedPositionedddState extends State<AnimatedPositioneddd>
               height: selected ? 50.0 : 200.0,
               top: selected ? 50.0 : 150.0,
               curve: Curves.fastOutSlowIn,
-              duration: Duration(seconds: 2),
+              duration: const Duration(seconds: 2),
               child: GestureDetector(
                 onTap: () {
                   setState(() {
@@ -47,8 +47,8 @@ class _AnimatedPositionedddState extends State<AnimatedPositioneddd>
         ),
       ),
       floatingActionButton: FloatingActionButton(onPressed: () {
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => AnimatedAlighnnn()));
+        Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => const AnimatedAlighnnn()));
       }),
     );
   }

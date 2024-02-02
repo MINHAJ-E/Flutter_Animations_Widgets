@@ -1,4 +1,4 @@
-import 'package:animation/animated_crossfade.dart';
+import 'package:animation/view/animated_crossfade.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedContainerr extends StatefulWidget {
@@ -14,7 +14,7 @@ class _AnimatedContainerrState extends State<AnimatedContainerr> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("animted container"),
+        title: const Text("animted container"),
       ),
       body: GestureDetector(
         onTap: () {
@@ -28,17 +28,17 @@ class _AnimatedContainerrState extends State<AnimatedContainerr> {
             height: selected ? 100.0 : 200.0,
             color: selected ? Colors.red : Colors.green,
             alignment: selected ? Alignment.center : Alignment.topCenter,
-            duration: Duration(seconds: 2),
+            duration: const Duration(seconds: 2),
             curve: Curves.fastOutSlowIn,
-            child: FlutterLogo(
+            child: const FlutterLogo(
               size: 75,
             ),
           ),
         ),
       ),
       floatingActionButton: FloatingActionButton(onPressed: () {
-        Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => AnimatedCrossFadeee()));
+        Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => const AnimatedCrossFadeee()));
       }),
     );
   }

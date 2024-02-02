@@ -1,4 +1,4 @@
-import 'package:animation/animated_icon.dart';
+import 'package:animation/view/animated_icon.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedDeafultTextStyleee extends StatefulWidget {
@@ -19,7 +19,7 @@ class _AnimatedDeafultTextStyleeeState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Animated deafult text style widget"),
+        title: const Text("Animated deafult text style widget"),
       ),
       body: Column(
         mainAxisSize: MainAxisSize.min,
@@ -27,12 +27,12 @@ class _AnimatedDeafultTextStyleeeState
           SizedBox(
             height: 120,
             child: AnimatedDefaultTextStyle(
-              duration: Duration(milliseconds: 300),
+              duration: const Duration(milliseconds: 300),
               style: TextStyle(
                   fontSize: _fontsiz,
                   color: _color,
                   fontWeight: FontWeight.bold),
-              child: Text("FLUTTER "),
+              child: const Text("FLUTTER "),
             ),
           ),
           TextButton(
@@ -43,12 +43,12 @@ class _AnimatedDeafultTextStyleeeState
                   _first = !_first;
                 });
               },
-              child: Text("SWITCH"))
+              child: const Text("SWITCH"))
         ],
       ),
       floatingActionButton: FloatingActionButton(onPressed: () {
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => AnimatedIconsss()));
+        Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => const AnimatedIconsss()));
       }),
     );
   }

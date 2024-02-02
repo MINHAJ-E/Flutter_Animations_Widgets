@@ -1,4 +1,4 @@
-import 'package:animation/animated_builder.dart';
+import 'package:animation/view/animated_builder.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedAlighnnn extends StatefulWidget {
@@ -15,7 +15,7 @@ class _AnimatedAlighnnnState extends State<AnimatedAlighnnn>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Animated align"),
+        title: const Text("Animated align"),
       ),
       body: GestureDetector(
         onTap: () {
@@ -30,16 +30,16 @@ class _AnimatedAlighnnnState extends State<AnimatedAlighnnn>
             color: Colors.amber,
             child: AnimatedAlign(
               alignment: selected ? Alignment.topRight : Alignment.bottomCenter,
-              duration: Duration(seconds: 1),
+              duration: const Duration(seconds: 1),
               curve: Curves.fastOutSlowIn,
-              child: FlutterLogo(),
+              child: const FlutterLogo(),
             ),
           ),
         ),
       ),
       floatingActionButton: FloatingActionButton(onPressed: () {
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => AnimatedBuilderr()));
+        Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => const AnimatedBuilderr()));
       }),
     );
   }
