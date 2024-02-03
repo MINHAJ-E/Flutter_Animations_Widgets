@@ -1,4 +1,3 @@
-import 'package:animation/view/tween_animation.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedIconsss extends StatefulWidget {
@@ -52,10 +51,6 @@ class _AnimatedIconsssState extends State<AnimatedIconsss>
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => TweenAnimationnn()));
-      }),
     );
   }
 }

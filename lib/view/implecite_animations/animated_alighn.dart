@@ -1,4 +1,3 @@
-import 'package:animation/view/animated_builder.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedAlighnnn extends StatefulWidget {
@@ -29,18 +28,18 @@ class _AnimatedAlighnnnState extends State<AnimatedAlighnnn>
             height: 250.0,
             color: Colors.amber,
             child: AnimatedAlign(
-              alignment: selected ? Alignment.topRight : Alignment.bottomCenter,
-              duration: const Duration(seconds: 1),
+              alignment:
+                  selected ? Alignment.centerLeft : Alignment.centerRight,
+              duration: const Duration(seconds: 2),
               curve: Curves.fastOutSlowIn,
-              child: const FlutterLogo(),
+              child: const Text(
+                "HEY",
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+              ),
             ),
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => const AnimatedBuilderr()));
-      }),
     );
   }
 }

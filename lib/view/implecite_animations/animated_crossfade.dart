@@ -1,4 +1,3 @@
-import 'package:animation/view/animated_default_textstyle.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedCrossFadeee extends StatefulWidget {
@@ -32,16 +31,12 @@ class _AnimatedCrossFadeeeState extends State<AnimatedCrossFadeee> {
               child: const Text("SWITCH")),
           AnimatedCrossFade(
               firstChild: Image.asset("asset/beach.jpg"),
-              secondChild: Image.asset("asset/bg.jpg"),
+              secondChild: Image.asset("asset/city.jpg"),
               crossFadeState:
                   _bool ? CrossFadeState.showFirst : CrossFadeState.showSecond,
               duration: const Duration(seconds: 1))
         ],
       ),
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        Navigator.of(context).push(MaterialPageRoute(
-            builder: (context) => const AnimatedDeafultTextStyleee()));
-      }),
     );
   }
 }

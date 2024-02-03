@@ -1,4 +1,3 @@
-import 'package:animation/view/animated_crossfade.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedContainerr extends StatefulWidget {
@@ -36,10 +35,6 @@ class _AnimatedContainerrState extends State<AnimatedContainerr> {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        Navigator.of(context).push(MaterialPageRoute(
-            builder: (context) => const AnimatedCrossFadeee()));
-      }),
     );
   }
 }

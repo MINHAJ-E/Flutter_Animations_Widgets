@@ -1,4 +1,3 @@
-import 'package:animation/view/animated_container.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
@@ -42,10 +41,6 @@ class _AnimatedBuilderrState extends State<AnimatedBuilderr>
           },
         ),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        Navigator.of(context).push(MaterialPageRoute(
-            builder: (context) => const AnimatedContainerr()));
-      }),
     );
   }
 }

@@ -41,14 +41,8 @@ class _TweenAnimationnnState extends State<TweenAnimationnn>
         title: const Text('Tween Animation Example'),
       ),
       body: Center(
-        // child: Container(
-        //   width: _animation.value,
-        //   height: _animation.value,
-        //   color: Colors.blue,
-        // ),
         child: FlutterLogo(
           size: _animation.value,
-          // height: _animation.value,
         ),
       ),
     );

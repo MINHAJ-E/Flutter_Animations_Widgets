@@ -1,4 +1,3 @@
-import 'package:animation/view/animated_positioned.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -15,7 +14,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
       appBar: AppBar(title: const Text("animated size")),
       body: Center(
         child: AnimatedSize(
-          // vsync: this, // Pass `this` as the `vsync`
+          // vsync: this,
           duration: const Duration(seconds: 3),
           child: SizedBox(
             // width: 100,
@@ -24,10 +23,6 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        Navigator.of(context).push(MaterialPageRoute(
-            builder: (context) => const AnimatedPositioneddd()));
-      }),
     );
   }
 }

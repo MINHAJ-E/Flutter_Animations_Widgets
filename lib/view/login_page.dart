@@ -11,14 +11,15 @@ class LoginPAge extends StatefulWidget {
 }
 
 class _LoginPAgeState extends State<LoginPAge> {
-  final language = ['en', 'ml', 'hi'];
+  final language = ['en', 'ml', 'hi', 'ar'];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Colors.amber,
-        title: const Text("LOGIN PAGE"),
+        title: Text(AppLocalizations.of(context)!.login),
         actions: [
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),

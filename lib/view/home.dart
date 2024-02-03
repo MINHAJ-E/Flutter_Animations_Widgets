@@ -1,5 +1,17 @@
-import 'package:animation/constants/data.dart';
-import 'package:animation/view/animated_size.dart';
+import 'package:animation/utils/data.dart';
+import 'package:animation/view/explecite_animations/animated_builder.dart';
+import 'package:animation/view/implecite_animations/animated_alighn.dart';
+import 'package:animation/view/implecite_animations/animated_container.dart';
+import 'package:animation/view/implecite_animations/animated_container_screen.dart';
+import 'package:animation/view/implecite_animations/animated_crossfade.dart';
+import 'package:animation/view/implecite_animations/animated_default_textstyle.dart';
+import 'package:animation/view/implecite_animations/animated_opacity.dart';
+import 'package:animation/view/hero_detailes.dart';
+import 'package:animation/view/explecite_animations/animated_icon.dart';
+import 'package:animation/view/implecite_animations/animated_positioned.dart';
+import 'package:animation/view/explecite_animations/posiotioned_transition.dart';
+import 'package:animation/view/explecite_animations/tween_animation.dart';
+import 'package:animation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
@@ -63,7 +75,9 @@ class _MyHomePageState extends State<MyHomePage> {
                           Navigator.of(context).push(MaterialPageRoute(
                             builder: (context) {
                               // return Detail(data: datas);
-                              return const Home();
+                              return Detail(
+                                data: datas,
+                              );
                             },
                           ));
                         },
@@ -114,6 +128,68 @@ class _MyHomePageState extends State<MyHomePage> {
                     },
                   ),
           ),
+          const SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                MuButton(
+                  text: "tweeen",
+                  navigation: TweenAnimationnn(),
+                ),
+                MuButton(
+                  text: "align",
+                  navigation: AnimatedAlighnnn(),
+                ),
+                MuButton(
+                  text: "builder",
+                  navigation: AnimatedBuilderr(),
+                ),
+                MuButton(
+                  text: "container size",
+                  navigation: AnimatedContainerScreen(),
+                ),
+                MuButton(
+                  text: "container",
+                  navigation: AnimatedContainerr(),
+                ),
+                MuButton(
+                  text: "tweeen",
+                  navigation: TweenAnimationnn(),
+                ),
+                MuButton(
+                  text: "crosfade",
+                  navigation: AnimatedCrossFadeee(),
+                ),
+                MuButton(
+                  text: "defaulttext",
+                  navigation: AnimatedDeafultTextStyleee(),
+                ),
+                MuButton(
+                  text: "icon",
+                  navigation: AnimatedIconsss(),
+                ),
+                MuButton(
+                  text: "positioned",
+                  navigation: AnimatedPositioneddd(),
+                ),
+                MuButton(
+                  text: "tween transition",
+                  navigation: AnimationScreen(),
+                ),
+                MuButton(
+                  text: "opacity",
+                  navigation: AnimatedOpacityy(),
+                ),
+                // MuButton(
+                //   text: "galaxy",
+                //   navigation: GalaxyAnim(),
+                // ),
+              ],
+            ),
+          ),
+          const SizedBox(
+            height: 30,
+          )
         ],
       ),
     );

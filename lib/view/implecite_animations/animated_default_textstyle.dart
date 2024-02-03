@@ -1,4 +1,3 @@
-import 'package:animation/view/animated_icon.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedDeafultTextStyleee extends StatefulWidget {
@@ -46,10 +45,6 @@ class _AnimatedDeafultTextStyleeeState
               child: const Text("SWITCH"))
         ],
       ),
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => const AnimatedIconsss()));
-      }),
     );
   }
 }

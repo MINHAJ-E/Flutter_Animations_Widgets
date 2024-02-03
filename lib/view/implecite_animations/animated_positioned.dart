@@ -1,4 +1,3 @@
-import 'package:animation/view/animated_alighn.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedPositioneddd extends StatefulWidget {
@@ -46,10 +45,6 @@ class _AnimatedPositionedddState extends State<AnimatedPositioneddd>
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => const AnimatedAlighnnn()));
-      }),
     );
   }
 }
